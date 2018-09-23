@@ -1,0 +1,234 @@
+/*BG Colors*/
+$purple-dark: hsl(287, 39%, 23%);
+$purple: #623071;
+$gray: #E2E2E2;
+$white: #FFFFFF;
+/*Text Colors*/
+$text-dark: #000000;
+$text-light: #8B8D90;
+/*Text Sizes*/
+$size-regular: 18px;
+$size-small: 16px;
+$size-large: 20px;
+
+/*Spacings*/
+$spacing-small: 5px;
+$spacing-regular: 10px;
+
+body, p , h1, h2{
+    margin: 0;
+    font-weight: 400;
+}
+.wrapper {
+    background: $purple-dark;
+    padding: $spacing-regular;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase
+}
+.wrapper__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 700;
+        span {
+            margin-left: $spacing-small;
+        }
+    }
+    .count__circle {
+        border-radius: 50%;
+        background: $white;
+        color: $purple-dark;
+        align-items: center;
+        padding: 3px;
+    }
+}
+.sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: $spacing-regular;
+    .sections__left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-right: $spacing-regular;
+        overflow: hidden;
+        .sections__left--one {
+            height: 300px;
+            overflow-y: scroll;
+            margin-bottom: $spacing-regular;
+        }
+        .sections__left--two {
+            height:300px;
+            overflow: auto;
+            background: $white;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $purple;
+            padding: $spacing-small;
+            color: $white;
+            font-weight: 400;
+            h1, span {
+                font-size: 20px;
+            }
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            border-bottom: 1px solid $gray;
+            flex-basis: 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+            .row__left {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: $white;
+                position: relative;
+                width: 100%;
+                flex-basis: 1;
+                flex-grow: 1;
+                flex-shrink: 1;
+                .first {
+                    font-weight: 700;
+                    color: $text-dark;
+                    font-size: 20px;
+                }
+                .second, .fourth, .sixth {
+                    font-weight: 400;
+                    color: $text-light;
+                }
+                & > * {
+                    padding: $spacing-small;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &:after {
+                    content:"";
+                    position: absolute;
+                    top:0;
+                    left:100%;
+                    height:0;
+                    width:0; 
+                    border-width: 20px;
+                    border-style:solid;
+                    border-color:$white;
+                    border-top-color:transparent;
+                    border-bottom-color:transparent;
+                    border-right-color:transparent;
+                }
+            }
+            .row__right {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: $gray;
+                padding-left: 3*$spacing-regular;
+                flex-basis: 1;
+                flex-grow: 1;
+                flex-shrink: 1;
+                & > * {
+                    padding: $spacing-small;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+    .sections__right {
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+        .sections__right--three {
+            width: 100%;
+            height: 100%;
+            background: $white;
+            overflow-y: scroll;
+            height: 600px + $spacing-regular;
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: $purple;
+                padding: $spacing-small;
+                h1, span {
+                    font-size: 20px;
+                    color: white;
+                }
+                div {
+                    .divider {
+                        height: 2px;
+                        width: 30px;
+                        background-color: $white;
+                        margin: $spacing-small 0;
+                    }
+                }
+            }
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background: $white;
+                padding: $spacing-regular;
+                font-weight: 400;
+                font-size: 18px;
+                border-bottom: 1px solid $gray;
+                & > * {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-content: center;
+                    align-items: center;
+                    & > *:first-child {
+                        margin-bottom: $spacing-regular;
+                    }
+                    & > *::nth-child(2) {
+                    }
+                }
+                .row__first {
+                    align-items: flex-start;
+                    .row__first--top {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        p:first-child {
+                            margin-right: $spacing-regular;
+                            font-weight: 700;
+                        }
+                        p:nth-child(2) {
+                            color: $text-light;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .row__fourth {
+                    color: $text-light;
+                    font-size: 16px;
+                }
+                .row__fifth {
+                    align-items: flex-end;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

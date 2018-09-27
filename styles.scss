@@ -254,14 +254,13 @@ html,body, p , h1, h2{
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
     .sections {
         flex-direction: column;
         .sections__left, .sections__right {
             width: 100%;
-            .sections__left--one, .sections__left--two, .row{
-
-                width: auto;
+            .sections__left--one, .sections__left--two, .sections__right--three {
+                width: 100%;
                 overflow: scroll;
             }
         }
@@ -271,8 +270,11 @@ html,body, p , h1, h2{
     }
 }
 @media screen and (max-width: 700px) {
-    .sections__right--three, .row {
+    .sections__left--one, .sections__left--two, .sections__right--three {
+        width: 100%;
+        overflow: scroll;
+    }
+    .row {
             min-width: 650px;
-            overflow: scroll;
         }
 }

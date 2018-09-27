@@ -210,5 +210,12 @@ html, body, p, h1, h2 {
     flex-direction: column; }
     .sections .sections__left, .sections .sections__right {
       width: 100%; }
+      .sections .sections__left .sections__left--one, .sections .sections__left .sections__left--two, .sections .sections__left .row, .sections .sections__right .sections__left--one, .sections .sections__right .sections__left--two, .sections .sections__right .row {
+        width: auto;
+        overflow: scroll; }
     .sections .sections__right--three {
       margin-top: 15px; } }
+@media screen and (max-width: 700px) {
+  .sections__right--three, .row {
+    min-width: 650px;
+    overflow: scroll; } }

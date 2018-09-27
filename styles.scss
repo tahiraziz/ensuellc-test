@@ -259,9 +259,20 @@ html,body, p , h1, h2{
         flex-direction: column;
         .sections__left, .sections__right {
             width: 100%;
+            .sections__left--one, .sections__left--two, .row{
+
+                width: auto;
+                overflow: scroll;
+            }
         }
         .sections__right--three {
             margin-top: $spacing-regular;
         }
     }
+}
+@media screen and (max-width: 700px) {
+    .sections__right--three, .row {
+            min-width: 650px;
+            overflow: scroll;
+        }
 }

@@ -8,13 +8,13 @@ $white: #FFFFFF;
 $text-dark: #000000;
 $text-light: #8B8D90;
 /*Text Sizes*/
-$size-regular: 18px;
-$size-small: 16px;
-$size-large: 20px;
+$size-regular: 24px;
+$size-small: 22px;
+$size-large: 26px;
 
 /*Spacings*/
-$spacing-small: 5px;
-$spacing-regular: 10px;
+$spacing-small: 10px;
+$spacing-regular: 15px;
 
 /*Reset*/
 html,body, p , h1, h2{
@@ -89,7 +89,7 @@ html,body, p , h1, h2{
             color: $white;
             font-weight: 400;
             h1, span {
-                font-size: 20px;
+                font-size: $size-large;
             }
         }
         .row {
@@ -97,7 +97,7 @@ html,body, p , h1, h2{
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            font-size: 18px;
+            font-size: $size-regular;
             border-bottom: 1px solid $dark-gray;
             flex-basis: 1;
             flex-grow: 1;
@@ -110,10 +110,11 @@ html,body, p , h1, h2{
                 background: $white;
                 position: relative;
                 width: 82%;
+                padding: $spacing-small;
                 .first {
                     font-weight: 700;
                     color: $text-dark;
-                    font-size: 20px;
+                    font-size: $size-large;
                 }
                 .second, .fourth, .sixth {
                     font-weight: 400;
@@ -132,7 +133,7 @@ html,body, p , h1, h2{
                     left:100%;
                     height:0;
                     width:0; 
-                    border-width: 20px;
+                    border-width: 36px;
                     border-style:solid;
                     border-color:$white;
                     border-top-color:transparent;
@@ -146,10 +147,11 @@ html,body, p , h1, h2{
                 justify-content: space-between;
                 align-items: center;
                 background: $gray;
-                padding-left: 3*$spacing-regular;
                 flex-basis: 1;
                 flex-grow: 1;
                 flex-shrink: 1;
+                padding: $spacing-small;
+                padding-left: 3*$spacing-regular;
                 width: 18%;
                 & > *:not(img) {
                     padding: $spacing-small;
@@ -183,7 +185,7 @@ html,body, p , h1, h2{
                 background: $purple;
                 padding: $spacing-small;
                 h1, span {
-                    font-size: 20px;
+                    font-size: $size-large;
                     color: white;
                 }
                 div {
@@ -203,7 +205,7 @@ html,body, p , h1, h2{
                 background: $white;
                 padding: $spacing-regular;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: $size-regular;
                 border-bottom: 1px solid $dark-gray;
                 flex-basis: 1;
                     flex-grow: 1;
@@ -235,19 +237,31 @@ html,body, p , h1, h2{
                         }
                         p:nth-child(2) {
                             color: $text-light;
-                            font-size: 16px;
+                            font-size: $size-small;
                         }
                     }
                 }
                 .row__fourth {
                     color: $text-light;
-                    font-size: 16px;
+                    font-size: $size-small;
                 }
                 .row__fifth {
                     align-items: flex-end;
                     justify-content: space-between;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sections {
+        flex-direction: column;
+        .sections__left, .sections__right {
+            width: 100%;
+        }
+        .sections__right--three {
+            margin-top: $spacing-regular;
         }
     }
 }

@@ -11,7 +11,7 @@ html, body, p, h1, h2 {
 
 .wrapper {
   background: #482452;
-  padding: 10px;
+  padding: 15px;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   height: 100%; }
@@ -27,8 +27,8 @@ html, body, p, h1, h2 {
     align-items: flex-end;
     font-weight: 700; }
     .wrapper__header .logo span {
-      margin-left: 5px;
-      font-size: 20px; }
+      margin-left: 10px;
+      font-size: 26px; }
   .wrapper__header .count__circle {
     border-radius: 50%;
     background: #FFFFFF;
@@ -41,18 +41,18 @@ html, body, p, h1, h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 10px;
+  margin-top: 15px;
   height: 100%; }
   .sections .sections__left {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 15px;
     overflow: hidden;
     height: 100%; }
     .sections .sections__left .sections__left--one {
       overflow-y: scroll;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       height: 50%;
       background: #FFFFFF;
       width: 100%; }
@@ -66,17 +66,17 @@ html, body, p, h1, h2 {
       justify-content: space-between;
       align-items: center;
       background-color: #623071;
-      padding: 5px;
+      padding: 10px;
       color: #FFFFFF;
       font-weight: 400; }
       .sections .sections__left header h1, .sections .sections__left header span {
-        font-size: 20px; }
+        font-size: 26px; }
     .sections .sections__left .row {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      font-size: 18px;
+      font-size: 24px;
       border-bottom: 1px solid #cdcdcd;
       flex-basis: 1;
       flex-grow: 1;
@@ -88,16 +88,17 @@ html, body, p, h1, h2 {
         align-items: center;
         background: #FFFFFF;
         position: relative;
-        width: 82%; }
+        width: 82%;
+        padding: 10px; }
         .sections .sections__left .row .row__left .first {
           font-weight: 700;
           color: #000000;
-          font-size: 20px; }
+          font-size: 26px; }
         .sections .sections__left .row .row__left .second, .sections .sections__left .row .row__left .fourth, .sections .sections__left .row .row__left .sixth {
           font-weight: 400;
           color: #8B8D90; }
         .sections .sections__left .row .row__left > *:not(img) {
-          padding: 5px;
+          padding: 10px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
@@ -108,7 +109,7 @@ html, body, p, h1, h2 {
           left: 100%;
           height: 0;
           width: 0;
-          border-width: 20px;
+          border-width: 36px;
           border-style: solid;
           border-color: #FFFFFF;
           border-top-color: transparent;
@@ -120,13 +121,14 @@ html, body, p, h1, h2 {
         justify-content: space-between;
         align-items: center;
         background: #E2E2E2;
-        padding-left: 30px;
         flex-basis: 1;
         flex-grow: 1;
         flex-shrink: 1;
+        padding: 10px;
+        padding-left: 45px;
         width: 18%; }
         .sections .sections__left .row .row__right > *:not(img) {
-          padding: 5px;
+          padding: 10px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
@@ -150,24 +152,24 @@ html, body, p, h1, h2 {
         justify-content: space-between;
         align-items: center;
         background: #623071;
-        padding: 5px; }
+        padding: 10px; }
         .sections .sections__right .sections__right--three header h1, .sections .sections__right .sections__right--three header span {
-          font-size: 20px;
+          font-size: 26px;
           color: white; }
         .sections .sections__right .sections__right--three header div .divider {
           height: 2px;
           width: 30px;
           background-color: #FFFFFF;
-          margin: 5px 0; }
+          margin: 10px 0; }
       .sections .sections__right .sections__right--three .row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         background: #FFFFFF;
-        padding: 10px;
+        padding: 15px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 24px;
         border-bottom: 1px solid #cdcdcd;
         flex-basis: 1;
         flex-grow: 1;
@@ -183,7 +185,7 @@ html, body, p, h1, h2 {
             overflow: hidden;
             text-overflow: ellipsis; }
           .sections .sections__right .sections__right--three .row > * > *:first-child {
-            margin-bottom: 10px; }
+            margin-bottom: 15px; }
         .sections .sections__right .sections__right--three .row .row__first {
           align-items: flex-start; }
           .sections .sections__right .sections__right--three .row .row__first .row__first--top {
@@ -191,14 +193,22 @@ html, body, p, h1, h2 {
             flex-direction: row;
             align-items: center; }
             .sections .sections__right .sections__right--three .row .row__first .row__first--top p:first-child {
-              margin-right: 10px;
+              margin-right: 15px;
               font-weight: 700; }
             .sections .sections__right .sections__right--three .row .row__first .row__first--top p:nth-child(2) {
               color: #8B8D90;
-              font-size: 16px; }
+              font-size: 22px; }
         .sections .sections__right .sections__right--three .row .row__fourth {
           color: #8B8D90;
-          font-size: 16px; }
+          font-size: 22px; }
         .sections .sections__right .sections__right--three .row .row__fifth {
           align-items: flex-end;
           justify-content: space-between; }
+
+@media screen and (max-width: 1024px) {
+  .sections {
+    flex-direction: column; }
+    .sections .sections__left, .sections .sections__right {
+      width: 100%; }
+    .sections .sections__right--three {
+      margin-top: 15px; } }

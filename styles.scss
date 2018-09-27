@@ -2,6 +2,7 @@
 $purple-dark: hsl(287, 39%, 23%);
 $purple: #623071;
 $gray: #E2E2E2;
+$dark-gray: rgb(205, 205, 205);
 $white: #FFFFFF;
 /*Text Colors*/
 $text-dark: #000000;
@@ -15,15 +16,19 @@ $size-large: 20px;
 $spacing-small: 5px;
 $spacing-regular: 10px;
 
-body, p , h1, h2{
+/*Reset*/
+html,body, p , h1, h2{
     margin: 0;
     font-weight: 400;
+    height: 100%;
+    width: 100%,auto;
 }
 .wrapper {
     background: $purple-dark;
     padding: $spacing-regular;
     font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase
+    text-transform: uppercase;
+    height: 100%;
 }
 .wrapper__header {
     display: flex;
@@ -33,10 +38,11 @@ body, p , h1, h2{
     .logo {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         font-weight: 700;
         span {
             margin-left: $spacing-small;
+            font-size: $size-large;
         }
     }
     .count__circle {
@@ -53,21 +59,26 @@ body, p , h1, h2{
     justify-content: space-between;
     align-items: flex-start;
     margin-top: $spacing-regular;
+    height: 100%;
     .sections__left {
         width: 50%;
         display: flex;
         flex-direction: column;
         margin-right: $spacing-regular;
         overflow: hidden;
+        height: 100%;
         .sections__left--one {
-            height: 300px;
             overflow-y: scroll;
             margin-bottom: $spacing-regular;
+            height: 50%;
+            background: $white;
+            width: 100%;
         }
         .sections__left--two {
-            height:300px;
             overflow: auto;
             background: $white;
+            height: 50%;
+            width: 100%;
         }
         header{
             display: flex;
@@ -87,7 +98,7 @@ body, p , h1, h2{
             align-items: center;
             justify-content: space-between;
             font-size: 18px;
-            border-bottom: 1px solid $gray;
+            border-bottom: 1px solid $dark-gray;
             flex-basis: 1;
             flex-grow: 1;
             flex-shrink: 1;
@@ -98,10 +109,7 @@ body, p , h1, h2{
                 align-items: center;
                 background: $white;
                 position: relative;
-                width: 100%;
-                flex-basis: 1;
-                flex-grow: 1;
-                flex-shrink: 1;
+                width: 82%;
                 .first {
                     font-weight: 700;
                     color: $text-dark;
@@ -111,7 +119,7 @@ body, p , h1, h2{
                     font-weight: 400;
                     color: $text-light;
                 }
-                & > * {
+                & > *:not(img) {
                     padding: $spacing-small;
                     white-space: nowrap;
                     overflow: hidden;
@@ -142,11 +150,17 @@ body, p , h1, h2{
                 flex-basis: 1;
                 flex-grow: 1;
                 flex-shrink: 1;
-                & > * {
+                width: 18%;
+                & > *:not(img) {
                     padding: $spacing-small;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                }
+                & > * {
+                    flex-basis: 1;
+                    flex-grow: 1;
+                    flex-shrink: 1;
                 }
             }
         }
@@ -161,7 +175,6 @@ body, p , h1, h2{
             height: 100%;
             background: $white;
             overflow-y: scroll;
-            height: 600px + $spacing-regular;
             header {
                 display: flex;
                 flex-direction: row;
@@ -191,8 +204,16 @@ body, p , h1, h2{
                 padding: $spacing-regular;
                 font-weight: 400;
                 font-size: 18px;
-                border-bottom: 1px solid $gray;
+                border-bottom: 1px solid $dark-gray;
+                flex-basis: 1;
+                    flex-grow: 1;
+                    flex-shrink: 1;
                 & > * {
+                    &:not(img) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -200,8 +221,6 @@ body, p , h1, h2{
                     align-items: center;
                     & > *:first-child {
                         margin-bottom: $spacing-regular;
-                    }
-                    & > *::nth-child(2) {
                     }
                 }
                 .row__first {

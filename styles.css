@@ -2,15 +2,19 @@
 /*Text Colors*/
 /*Text Sizes*/
 /*Spacings*/
-body, p, h1, h2 {
+/*Reset*/
+html, body, p, h1, h2 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 400;
+  height: 100%;
+  width: 100%,auto; }
 
 .wrapper {
   background: #482452;
   padding: 10px;
   font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  height: 100%; }
 
 .wrapper__header {
   display: flex;
@@ -20,10 +24,11 @@ body, p, h1, h2 {
   .wrapper__header .logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     font-weight: 700; }
     .wrapper__header .logo span {
-      margin-left: 5px; }
+      margin-left: 5px;
+      font-size: 20px; }
   .wrapper__header .count__circle {
     border-radius: 50%;
     background: #FFFFFF;
@@ -36,21 +41,26 @@ body, p, h1, h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 10px; }
+  margin-top: 10px;
+  height: 100%; }
   .sections .sections__left {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin-right: 10px;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100%; }
     .sections .sections__left .sections__left--one {
-      height: 300px;
       overflow-y: scroll;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      height: 50%;
+      background: #FFFFFF;
+      width: 100%; }
     .sections .sections__left .sections__left--two {
-      height: 300px;
       overflow: auto;
-      background: #FFFFFF; }
+      background: #FFFFFF;
+      height: 50%;
+      width: 100%; }
     .sections .sections__left header {
       display: flex;
       justify-content: space-between;
@@ -67,7 +77,7 @@ body, p, h1, h2 {
       align-items: center;
       justify-content: space-between;
       font-size: 18px;
-      border-bottom: 1px solid #E2E2E2;
+      border-bottom: 1px solid #cdcdcd;
       flex-basis: 1;
       flex-grow: 1;
       flex-shrink: 1; }
@@ -78,10 +88,7 @@ body, p, h1, h2 {
         align-items: center;
         background: #FFFFFF;
         position: relative;
-        width: 100%;
-        flex-basis: 1;
-        flex-grow: 1;
-        flex-shrink: 1; }
+        width: 82%; }
         .sections .sections__left .row .row__left .first {
           font-weight: 700;
           color: #000000;
@@ -89,7 +96,7 @@ body, p, h1, h2 {
         .sections .sections__left .row .row__left .second, .sections .sections__left .row .row__left .fourth, .sections .sections__left .row .row__left .sixth {
           font-weight: 400;
           color: #8B8D90; }
-        .sections .sections__left .row .row__left > * {
+        .sections .sections__left .row .row__left > *:not(img) {
           padding: 5px;
           white-space: nowrap;
           overflow: hidden;
@@ -116,12 +123,17 @@ body, p, h1, h2 {
         padding-left: 30px;
         flex-basis: 1;
         flex-grow: 1;
-        flex-shrink: 1; }
-        .sections .sections__left .row .row__right > * {
+        flex-shrink: 1;
+        width: 18%; }
+        .sections .sections__left .row .row__right > *:not(img) {
           padding: 5px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
+        .sections .sections__left .row .row__right > * {
+          flex-basis: 1;
+          flex-grow: 1;
+          flex-shrink: 1; }
   .sections .sections__right {
     display: flex;
     justify-content: flex-start;
@@ -131,8 +143,7 @@ body, p, h1, h2 {
       width: 100%;
       height: 100%;
       background: #FFFFFF;
-      overflow-y: scroll;
-      height: 610px; }
+      overflow-y: scroll; }
       .sections .sections__right .sections__right--three header {
         display: flex;
         flex-direction: row;
@@ -157,13 +168,20 @@ body, p, h1, h2 {
         padding: 10px;
         font-weight: 400;
         font-size: 18px;
-        border-bottom: 1px solid #E2E2E2; }
+        border-bottom: 1px solid #cdcdcd;
+        flex-basis: 1;
+        flex-grow: 1;
+        flex-shrink: 1; }
         .sections .sections__right .sections__right--three .row > * {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-content: center;
           align-items: center; }
+          .sections .sections__right .sections__right--three .row > *:not(img) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
           .sections .sections__right .sections__right--three .row > * > *:first-child {
             margin-bottom: 10px; }
         .sections .sections__right .sections__right--three .row .row__first {

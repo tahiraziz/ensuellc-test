@@ -205,7 +205,19 @@ html, body, p, h1, h2 {
           align-items: flex-end;
           justify-content: space-between; }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) and (min-width: 1024px) {
+  * {
+    font-size: 90%; }
+
+  .sections .sections__left .row .row__left .first {
+    font-size: 22px; }
+
+  .sections .sections__right .sections__right--three .row .row__first .row__first--top p:nth-child(2) {
+    font-size: 16px; }
+
+  .sections .sections__right .sections__right--three .row .row__first .row__first--top p:first-child {
+    font-size: 22px; } }
+@media screen and (max-width: 1000px) {
   .sections {
     flex-direction: column; }
     .sections .sections__left, .sections .sections__right {

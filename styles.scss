@@ -254,7 +254,21 @@ html,body, p , h1, h2{
     }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) and (min-width: 1024px) {
+    * {
+        font-size: 90%;
+    }
+    .sections .sections__left .row .row__left .first {
+        font-size: $size-small;
+    }
+    .sections .sections__right .sections__right--three .row .row__first .row__first--top p:nth-child(2) {
+        font-size: $size-small - 6px;
+    }
+    .sections .sections__right .sections__right--three .row .row__first .row__first--top p:first-child {
+        font-size: $size-small;
+    }
+}
+@media screen and (max-width: 1000px) {
     .sections {
         flex-direction: column;
         .sections__left, .sections__right {
